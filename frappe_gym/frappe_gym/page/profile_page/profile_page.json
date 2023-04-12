@@ -1,0 +1,19 @@
+{
+ "content": null,
+ "creation": "2023-04-10 18:15:29.559249",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2023-04-11 09:54:34.849625",
+ "modified_by": "Administrator",
+ "module": "Frappe Gym",
+ "name": "profile-page",
+ "owner": "Administrator",
+ "page_name": "profile-page",
+ "roles": [],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "Member Plan Details"
+}

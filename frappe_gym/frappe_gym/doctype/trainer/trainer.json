@@ -35,15 +35,13 @@
    "fieldname": "first_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "First Name",
-   "reqd": 1
+   "label": "First Name"
   },
   {
    "fieldname": "last_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Last Name",
-   "reqd": 1
+   "label": "Last Name"
   },
   {
    "fieldname": "full_name",
@@ -152,7 +150,7 @@
  "image_field": "photo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-12-08 14:39:28.689181",
+ "modified": "2023-04-03 10:26:03.200769",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Trainer",

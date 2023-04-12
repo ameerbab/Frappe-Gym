@@ -1,0 +1,1 @@
+frappe.db.set_global("installed_apps",'["frappe", "erpnext", "frappe_gym"]')

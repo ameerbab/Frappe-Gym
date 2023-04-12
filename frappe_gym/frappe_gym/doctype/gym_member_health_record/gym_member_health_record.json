@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-07 13:59:43.508714",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "membership_no",
+  "member",
+  "height",
+  "weight",
+  "click_button",
+  "health_stats",
+  "datetime_recorded"
+ ],
+ "fields": [
+  {
+   "fieldname": "membership_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Membership No",
+   "options": "Gym Membership",
+   "reqd": 1
+  },
+  {
+   "fieldname": "health_stats",
+   "fieldtype": "Table",
+   "label": "Health Stats",
+   "options": "Gym Member Health Status",
+   "reqd": 1
+  },
+  {
+   "fieldname": "datetime_recorded",
+   "fieldtype": "Datetime",
+   "label": "Date/Time Recorded",
+   "reqd": 1
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Float",
+   "label": "Height"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "click_button",
+   "fieldtype": "Button",
+   "label": "Click Button"
+  },
+  {
+   "fetch_from": "membership_no.member",
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "label": "Member",
+   "options": "Member"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-04-07 16:49:27.600253",
+ "modified_by": "Administrator",
+ "module": "Frappe Gym",
+ "name": "Gym Member Health Record",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

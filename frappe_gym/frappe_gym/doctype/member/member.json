@@ -15,6 +15,7 @@
   "sex",
   "dob",
   "height_in_metres",
+  "weight",
   "age_html",
   "column_break_7",
   "email",
@@ -25,7 +26,7 @@
   "photo",
   "phone",
   "invite_user",
-  "has_plan"
+  "has_active_plan"
  ],
  "fields": [
   {
@@ -43,28 +44,12 @@
    "options": "GYM-MEM-.YYYY.-"
   },
   {
-   "fieldname": "first_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "First Name",
-   "reqd": 1
-  },
-  {
-   "fieldname": "last_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Last Name",
-   "reqd": 1
-  },
-  {
    "bold": 1,
    "fieldname": "full_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Full Name",
-   "read_only": 1,
-   "search_index": 1
+   "label": "Full Name"
   },
   {
    "fieldname": "sex",
@@ -105,7 +90,7 @@
   },
   {
    "fieldname": "mobile",
-   "fieldtype": "Phone",
+   "fieldtype": "Data",
    "label": "Mobile Number",
    "options": "Phone"
   },
@@ -113,7 +98,7 @@
    "fieldname": "id_type",
    "fieldtype": "Select",
    "label": "ID Type",
-   "options": "ID\nPassport\nSocial Security"
+   "options": "ID\nAdhar Card\nPan Card\nPassport\nSocial Security"
   },
   {
    "fieldname": "id_number",
@@ -145,24 +130,37 @@
    "read_only_depends_on": "eval: doc.user_id"
   },
   {
-   "default": "0",
-   "fieldname": "has_plan",
-   "fieldtype": "Check",
-   "is_virtual": 1,
-   "label": "Has Active Gym Plan?",
-   "read_only": 1
-  },
-  {
    "description": "(used for BMI Calculations)",
    "fieldname": "height_in_metres",
    "fieldtype": "Float",
    "label": "Height in metres"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight"
+  },
+  {
+   "default": "0",
+   "fieldname": "has_active_plan",
+   "fieldtype": "Check",
+   "label": "Has Active Plan "
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
   }
  ],
  "image_field": "photo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-12-09 15:19:52.211158",
+ "modified": "2023-04-12 10:06:31.991458",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Member",

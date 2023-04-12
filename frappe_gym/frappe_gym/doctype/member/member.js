@@ -3,6 +3,13 @@
 
 frappe.ui.form.on("Member", {
     // show the age of the member based on date of birth
+    full_name_concate:function(frm){
+        frm.set_value("full_name", frm.doc.first_name +" "+frm.doc.last_name)
+     },
+    
+     last_name:function(frm){
+         frm.trigger('full_name_concate')
+     },
     onload: function (frm) {
         if (frm.doc.dob) {
             $(frm.fields_dict['age_html'].wrapper).html(`${__('AGE')} : ${get_age(frm.doc.dob)}`);

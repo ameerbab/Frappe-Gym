@@ -14,7 +14,7 @@ class GymMembership(Document):
 
 	# Virtual property to calculate days left in contract
 	@property
-	def days_left(self):
+	def day_lefts(self):
 		return get_days_left_in_plan(self.end_date)	
 
 @frappe.whitelist()
@@ -34,11 +34,11 @@ def get_days_left_in_plan(end_date):
 	if end_date:
 		today = getdate()
 		end = getdate(end_date)
-		days_left = date_diff(end,today)
+		day_lefts = date_diff(end,today)
 	else:
 		return 0	
 	
-	if days_left < 0:
+	if day_lefts < 0:
 		return 0
 	else:	
-		return days_left
+		return day_lefts

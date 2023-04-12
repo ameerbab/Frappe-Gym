@@ -98,21 +98,22 @@ fixtures = ['Member', 'Membership Types', 'Gym Membership']
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-#	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+	"Sales Order": "frappe_gym.frappe_gym.doc_events.sales_order.CustomSalesOrder"
+}
 
 # Document Events
 # ---------------
 # Hook on document methods and events
 
 # doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
+#     "Sales Order": "frappe_gym.frappe_gym.doc_events.sales_order.on_submit"
 # }
+doc_events = {
+    "Sales Order": {
+        "on_submit": "frappe_gym.frappe_gym.doc_events.sales_order.on_submit_events"
+    }
+}
 
 # Scheduled Tasks
 # ---------------

@@ -9,13 +9,14 @@
  "engine": "InnoDB",
  "field_order": [
   "member",
+  "email",
   "plan",
   "price",
-  "contract_status",
+  "status",
   "column_break_6",
   "start_date",
   "end_date",
-  "days_left",
+  "day_lefts",
   "payment_status",
   "section_break_3",
   "length",
@@ -50,14 +51,6 @@
    "read_only": 1
   },
   {
-   "fieldname": "contract_status",
-   "fieldtype": "Select",
-   "hidden": 1,
-   "is_virtual": 1,
-   "label": "Contract Status",
-   "options": "Active\nExpired\nCancelled\nNot Started"
-  },
-  {
    "fieldname": "column_break_6",
    "fieldtype": "Column Break"
   },
@@ -74,12 +67,6 @@
    "fieldtype": "Date",
    "in_list_view": 1,
    "label": "End Date"
-  },
-  {
-   "fieldname": "days_left",
-   "fieldtype": "Data",
-   "is_virtual": 1,
-   "label": "Days Left"
   },
   {
    "default": "Awaiting Payment",
@@ -123,11 +110,29 @@
    "label": "Naming Series",
    "options": "MS-",
    "read_only": 1
+  },
+  {
+   "fetch_from": "member.email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "email"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Contract Status",
+   "options": "Active\nExpired\nCancelled\nNot Started",
+   "read_only": 1
+  },
+  {
+   "fieldname": "day_lefts",
+   "fieldtype": "Data",
+   "label": "Days Left"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-12-18 02:32:11.733033",
+ "modified": "2023-04-11 16:52:39.257081",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Gym Membership",

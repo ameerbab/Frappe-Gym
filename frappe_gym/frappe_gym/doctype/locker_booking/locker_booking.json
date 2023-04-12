@@ -1,51 +1,71 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:BOOK-{locker}-{####}",
- "creation": "2022-12-09 01:26:50.804248",
+ "autoname": "format:Locker-{##}",
+ "creation": "2023-04-04 15:20:04.589795",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "member",
-  "locker",
-  "booking_date",
-  "status"
+  "locker_name",
+  "date_of_booking",
+  "start_time",
+  "end_time",
+  "route",
+  "is_published",
+  "l_start_time",
+  "l_end_time"
  ],
  "fields": [
   {
-   "fieldname": "member",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Member",
-   "options": "Member",
-   "reqd": 1
-  },
-  {
-   "fieldname": "locker",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Locker",
-   "options": "Locker",
-   "reqd": 1
-  },
-  {
-   "default": "Today",
-   "fieldname": "booking_date",
+   "fieldname": "date_of_booking",
    "fieldtype": "Date",
-   "label": "Booking Date"
+   "label": "Date of Booking"
   },
   {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Status",
-   "options": "Booked\nCompleted"
+   "fieldname": "start_time",
+   "fieldtype": "Time",
+   "label": "Start Time"
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Time",
+   "label": "End Time"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is Published"
+  },
+  {
+   "fetch_from": "locker_name.start_time",
+   "fieldname": "l_start_time",
+   "fieldtype": "Time",
+   "label": "L Start Time"
+  },
+  {
+   "fieldname": "locker_name",
+   "fieldtype": "Link",
+   "label": "Locker Name",
+   "options": "Locker Details"
+  },
+  {
+   "fetch_from": "locker_name.end_time",
+   "fieldname": "l_end_time",
+   "fieldtype": "Time",
+   "label": "L End  Time"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-12-09 01:26:50.804248",
+ "modified": "2023-04-06 14:12:52.067487",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Locker Booking",

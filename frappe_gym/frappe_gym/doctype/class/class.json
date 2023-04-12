@@ -49,7 +49,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Class Type",
-   "options": "Class Type"
+   "options": "Athletic Training\nBarre\nBoxing and Kickboxing\nCycling\nLong + Lean\nPilates\nStretch and Recovery\nYoga"
   },
   {
    "fieldname": "column_break_5",
@@ -138,7 +138,7 @@
  "is_calendar_and_gantt": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2022-12-18 02:09:00.297713",
+ "modified": "2023-04-08 12:05:40.550708",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Class",

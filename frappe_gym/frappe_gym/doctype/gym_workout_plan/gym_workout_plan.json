@@ -10,11 +10,13 @@
  "engine": "InnoDB",
  "field_order": [
   "plan_name",
-  "description",
-  "photo",
-  "sets",
-  "route",
-  "is_published"
+  "select_day",
+  "monday",
+  "tuesday",
+  "wednesday",
+  "thursday",
+  "friday",
+  "saturday"
  ],
  "fields": [
   {
@@ -26,39 +28,56 @@
    "reqd": 1
   },
   {
-   "fieldname": "description",
-   "fieldtype": "Small Text",
-   "label": "Description"
+   "fieldname": "select_day",
+   "fieldtype": "Select",
+   "label": "Select Day",
+   "options": "Monday\nTuesday\nWednesday\nThursday\nFriday\nSaturday"
   },
   {
-   "fieldname": "photo",
-   "fieldtype": "Attach Image",
-   "label": "photo"
-  },
-  {
-   "fieldname": "sets",
+   "depends_on": "eval:doc.select_day==\"Monday\"",
+   "fieldname": "monday",
    "fieldtype": "Table",
-   "label": "Sets",
-   "options": "Gym Workout Sets"
+   "label": "Monday",
+   "options": "Monday"
   },
   {
-   "fieldname": "route",
-   "fieldtype": "Data",
-   "label": "route"
+   "depends_on": "eval:doc.select_day==\"Tuesday\"",
+   "fieldname": "tuesday",
+   "fieldtype": "Table",
+   "label": "Tuesday",
+   "options": "Tuesday"
   },
   {
-   "default": "0",
-   "fieldname": "is_published",
-   "fieldtype": "Check",
-   "label": "is_published"
+   "depends_on": "eval:doc.select_day==\"Wednesday\"",
+   "fieldname": "wednesday",
+   "fieldtype": "Table",
+   "label": "Wednesday",
+   "options": "Wednesday"
+  },
+  {
+   "depends_on": "eval:doc.select_day==\"Thursday\"",
+   "fieldname": "thursday",
+   "fieldtype": "Table",
+   "label": "Thursday",
+   "options": "Thursday"
+  },
+  {
+   "depends_on": "eval:doc.select_day==\"Friday\"",
+   "fieldname": "friday",
+   "fieldtype": "Table",
+   "label": "Friday",
+   "options": "Friday"
+  },
+  {
+   "depends_on": "eval:doc.select_day==\"Saturday\"",
+   "fieldname": "saturday",
+   "fieldtype": "Table",
+   "label": "Saturday",
+   "options": "Saturday"
   }
  ],
- "has_web_view": 1,
- "image_field": "photo",
- "index_web_pages_for_search": 1,
- "is_published_field": "is_published",
  "links": [],
- "modified": "2022-12-09 01:12:09.025179",
+ "modified": "2023-04-08 11:14:58.788883",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Gym Workout Plan",

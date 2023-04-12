@@ -1,7 +1,7 @@
 {
  "actions": [],
  "autoname": "naming_series:",
- "creation": "2022-12-08 13:36:43.725757",
+ "creation": "2023-04-07 14:42:43.148016",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -17,7 +17,8 @@
   "pulse",
   "height",
   "weight",
-  "bmi"
+  "bmi",
+  "bmi_type"
  ],
  "fields": [
   {
@@ -34,6 +35,12 @@
    "fieldtype": "Data",
    "hidden": 1,
    "label": "Full Name"
+  },
+  {
+   "fetch_from": "member.email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Member email"
   },
   {
    "default": "VITALS-.YYYY.-",
@@ -78,6 +85,7 @@
    "label": "Height (in meters)"
   },
   {
+   "fetch_from": "member.weight",
    "fieldname": "weight",
    "fieldtype": "Float",
    "label": "Weight (in kilograms)"
@@ -90,14 +98,15 @@
    "read_only": 1
   },
   {
-   "fetch_from": "member.email",
-   "fieldname": "email",
+   "fieldname": "bmi_type",
    "fieldtype": "Data",
-   "label": "Member email"
+   "in_standard_filter": 1,
+   "label": "BMI type",
+   "read_only": 1
   }
  ],
  "links": [],
- "modified": "2022-12-08 16:37:41.755819",
+ "modified": "2023-04-07 14:42:43.148016",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Member Measurements",

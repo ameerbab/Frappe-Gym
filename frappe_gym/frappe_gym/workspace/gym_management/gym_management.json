@@ -13,6 +13,7 @@
  "hide_custom": 0,
  "icon": "color-energy-points",
  "idx": 0,
+ "is_hidden": 0,
  "label": "Gym Management",
  "links": [
   {
@@ -40,52 +41,13 @@
    "link_count": 4,
    "onboard": 0,
    "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Class Bookings",
-   "link_count": 0,
-   "link_to": "Class Bookings",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Class Bookings by Class Type",
-   "link_count": 0,
-   "link_to": "Class Bookings by Class Type",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Membership Fees Report",
-   "link_count": 0,
-   "link_to": "Membership Fees Report",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Member Progress Tracking",
-   "link_count": 0,
-   "link_to": "Member Progress Tracking",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
   }
  ],
- "modified": "2022-12-18 02:48:15.974216",
+ "modified": "2023-04-12 10:13:42.296756",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Gym Management",
+ "number_cards": [],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
@@ -93,13 +55,6 @@
  "roles": [],
  "sequence_id": 1.0,
  "shortcuts": [
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Locker",
-   "link_to": "Locker",
-   "type": "DocType"
-  },
   {
    "color": "Grey",
    "doc_view": "List",
