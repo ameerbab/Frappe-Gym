@@ -9,6 +9,7 @@
  "engine": "InnoDB",
  "field_order": [
   "locker_name",
+  "member",
   "date_of_booking",
   "start_time",
   "end_time",
@@ -61,11 +62,17 @@
    "fieldname": "l_end_time",
    "fieldtype": "Time",
    "label": "L End  Time"
+  },
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "label": "Member",
+   "options": "Member"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-06 14:12:52.067487",
+ "modified": "2023-04-12 10:19:58.876621",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Locker Booking",
