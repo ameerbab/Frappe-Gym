@@ -18,7 +18,9 @@
   {
    "fieldname": "locker_name",
    "fieldtype": "Data",
-   "label": "Locker Name"
+   "in_list_view": 1,
+   "label": "Locker Name",
+   "reqd": 1
   },
   {
    "fieldname": "locker_no",
@@ -43,7 +45,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-05 14:05:23.405957",
+ "modified": "2023-04-19 14:14:41.812620",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Locker Details",
@@ -59,6 +61,39 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Trainer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Member",
+   "share": 1
   }
  ],
  "sort_field": "modified",

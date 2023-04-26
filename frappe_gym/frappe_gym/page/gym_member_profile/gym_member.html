@@ -1,4 +1,4 @@
-<style></style>
+
 
 <div class="row user-profile">
 	<div class="col-md-12">
@@ -8,24 +8,26 @@
 					<!-- <h4 class="card-title">{{frappe.session.user}}</h4> -->
                     <table width="100%" border="1">
                         <tr>
-                        <th><User Name</th>
-                        <th>plan details</th>
-                        
-                        <th>Start Date</th>
+                        <th>User Name</th>
+                        <th>Plan Details</th>
+						<th>Price</th>
+                         <th>Start Date</th>
                         <th>End Date</th>
                         <th>Remaining Days</th>
                         <th>Status</th>
+						<th>Trainer</th>
                         </tr>
-					   <tr></tr>
+					  
 					   {% for d in message %}
                        <tr>
-						<td>{{frappe.session.user}}</td>
+						<td>{{d.full_name}}</td>
                         <td>{{d.plan}}</td>
-                       
+                        <td>{{d.price}}</td>
                         <td>{{d.start_date}}</td>
                         <td>{{d.end_date}}</td>
-                        <td>{{d.day_lefts}}</td>
+                        <td>{{d.days_left}}</td>
                         <td>{{d.status}}</td>
+						<td>{{d.trainer}}</td>
 					   </tr>
 					   {% endfor %}
                     </table>

@@ -15,7 +15,7 @@ frappe_gym.egg-info/top_level.txt
 frappe_gym/config/__init__.py
 frappe_gym/fixtures/gym_membership.json
 frappe_gym/fixtures/member.json
-frappe_gym/fixtures/membership_types.json
+
 frappe_gym/frappe_gym/__init__.py
 frappe_gym/frappe_gym/dashboard_chart/class_bookings/class_bookings.json
 frappe_gym/frappe_gym/dashboard_chart/financial_report/financial_report.json

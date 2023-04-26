@@ -4,15 +4,19 @@
  "docstatus": 0,
  "doctype": "Page",
  "idx": 0,
- "modified": "2023-04-11 10:38:17.912041",
+ "modified": "2023-04-12 11:18:04.302513",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "gym-member-profile",
  "owner": "Administrator",
  "page_name": "gym-member-profile",
- "roles": [],
+ "roles": [
+  {
+   "role": "Gym Admin"
+  }
+ ],
  "script": null,
  "standard": "Yes",
  "style": null,
- "system_page": 1
+ "system_page": 0
 }

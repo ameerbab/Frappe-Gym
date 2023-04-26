@@ -1,9 +1,5 @@
-# Copyright (c) 2022, Warren Eiserman and contributors
-# For license information, please see license.txt
-
 import frappe
 from frappe.website.website_generator import WebsiteGenerator
-
 class ClassBooking(WebsiteGenerator):
 	def before_save(self):
 		if not self.route:
@@ -16,6 +12,18 @@ def validate_booking(capacity,class_data):
 	
 	frappe.db.sql(f"""UPDATE `tabClass` SET available_capacity={slot_available} WHERE name='{class_data}';""")
 	return int(slot_available)
-    
+@frappe.whitelist()
+def get_trainer(class_data):
+	trainer=frappe.db.get_value("Class",class_data,"trainer")
+	trainer_name=frappe.db.get_value("Trainer",trainer,'full_name')
+	return trainer_name
+
+
+
 	
-	   
+	
+
+	
+
+   
+	

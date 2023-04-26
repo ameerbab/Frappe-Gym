@@ -77,19 +77,22 @@ class Analytics(object):
 			FROM
 				`tabClass` as c,`tabClass Booking` as cb,`tabMember` as m
 			WHERE
-			   cb.class_type=c.class_type and cb.full_name=m.full_name
+			   cb.class_name=c.class_name and cb.full_name=m.full_name
 			""",
 			as_dict=1,
 		)
 		
+		
 	def get_rows(self):
 		self.data = []
 		count=0
-		self.columns.append({"label":_("count"),"fieldtype":"Int","width":140})
+		
 		for d in self.entries:
+			
 			member = self.filters.get('member')
 			member_name = frappe.db.get_value("Member", member, "full_name")
 			class_name = self.filters.get('class')
+			
 			if class_name==d['class_data']:
 				row={
 					"class_name":d.class_name,
@@ -98,18 +101,22 @@ class Analytics(object):
 					"status":d.status,
 					"member":d.full_name,
 				}
+				
 				count=count+1
+				# frappe.msgprint(str(count))
 				row.update({'count':count})
 				self.data.append(row)
-			else:
-				row={
-					"class_name":d.class_name,
-					"class_type":d.class_type,
-					"class_data":d.class_data,
-					"status":d.status,
-					"member":d.full_name,
-				}
-				self.data.append(row)
+		
+			# else:
+			# 	row={
+			# 		"class_name":d.class_name,
+			# 		"class_type":d.class_type,
+			# 		"class_data":d.class_data,
+			# 		"status":d.status,
+			# 		"member":d.full_name,
+			# 	}
+			
+				# self.data.append(row)
 				
 				
 
@@ -123,12 +130,15 @@ class Analytics(object):
 		for row in self.entries:
 			if row.class_name not in labels:
 				labels.append(row.class_name)
-				total_mem.update({row.class_name : 1})
+				total_mem.update({row.class_name:1})
 			if total_mem.get(row.class_name):
 				total_mem[row.class_name] += 1
+				
+				
+	
 		datasets = []
 		for row in total_mem:
-			total_members.append(total_mem[row])
+			total_members.append(total_mem[row]-1)
 		datasets.append(
 		{
 			"name": "Total Members",
@@ -136,7 +146,7 @@ class Analytics(object):
 		}
 	)
 		# frappe.msgprint(str(datasets))
-		# frappe.msgprint(str(total_members))
+		# frappe.msgprint(str(total_mem))
 		self.chart = {"data": {"labels": labels, "datasets": datasets},"type": "donut"}
 		
 		

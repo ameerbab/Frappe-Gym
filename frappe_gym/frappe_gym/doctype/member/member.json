@@ -14,19 +14,14 @@
   "full_name",
   "sex",
   "dob",
-  "height_in_metres",
-  "weight",
-  "age_html",
   "column_break_7",
   "email",
   "user_id",
   "mobile",
   "id_type",
-  "id_number",
   "photo",
-  "phone",
   "invite_user",
-  "has_active_plan"
+  "status"
  ],
  "fields": [
   {
@@ -60,16 +55,8 @@
   {
    "fieldname": "dob",
    "fieldtype": "Date",
-   "label": "Date of Birth"
-  },
-  {
-   "fieldname": "age_html",
-   "fieldtype": "HTML",
-   "label": "Age",
-   "no_copy": 1,
-   "print_hide": 1,
-   "read_only": 1,
-   "report_hide": 1
+   "label": "Date of Birth",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_7",
@@ -92,7 +79,7 @@
    "fieldname": "mobile",
    "fieldtype": "Data",
    "label": "Mobile Number",
-   "options": "Phone"
+   "reqd": 1
   },
   {
    "fieldname": "id_type",
@@ -101,23 +88,10 @@
    "options": "ID\nAdhar Card\nPan Card\nPassport\nSocial Security"
   },
   {
-   "fieldname": "id_number",
-   "fieldtype": "Data",
-   "label": "ID Number"
-  },
-  {
    "fieldname": "photo",
    "fieldtype": "Attach Image",
    "hidden": 1,
    "label": "Photo"
-  },
-  {
-   "fieldname": "phone",
-   "fieldtype": "Phone",
-   "in_filter": 1,
-   "label": "Phone Number",
-   "no_copy": 1,
-   "options": "Phone"
   },
   {
    "allow_in_quick_entry": 1,
@@ -130,37 +104,29 @@
    "read_only_depends_on": "eval: doc.user_id"
   },
   {
-   "description": "(used for BMI Calculations)",
-   "fieldname": "height_in_metres",
-   "fieldtype": "Float",
-   "label": "Height in metres"
-  },
-  {
-   "fieldname": "weight",
-   "fieldtype": "Float",
-   "label": "Weight"
-  },
-  {
-   "default": "0",
-   "fieldname": "has_active_plan",
-   "fieldtype": "Check",
-   "label": "Has Active Plan "
-  },
-  {
    "fieldname": "first_name",
    "fieldtype": "Data",
-   "label": "First Name"
+   "label": "First Name",
+   "reqd": 1
   },
   {
    "fieldname": "last_name",
    "fieldtype": "Data",
-   "label": "Last Name"
+   "label": "Last Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Status",
+   "read_only": 1
   }
  ],
  "image_field": "photo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-12 10:06:31.991458",
+ "modified": "2023-04-20 15:09:57.191710",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Member",

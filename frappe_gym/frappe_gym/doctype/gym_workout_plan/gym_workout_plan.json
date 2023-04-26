@@ -1,87 +1,44 @@
 {
  "actions": [],
- "allow_guest_to_view": 1,
  "allow_rename": 1,
- "autoname": "format:PLAN-{###}",
- "creation": "2022-12-09 00:56:48.192536",
+ "autoname": "GWP-.##",
+ "creation": "2023-04-18 14:08:06.488206",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "plan_name",
-  "select_day",
-  "monday",
-  "tuesday",
-  "wednesday",
-  "thursday",
-  "friday",
-  "saturday"
+  "trainer",
+  "plan",
+  "description"
  ],
  "fields": [
   {
-   "fieldname": "plan_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Plan Name",
-   "reqd": 1
-  },
-  {
-   "fieldname": "select_day",
+   "fieldname": "plan",
    "fieldtype": "Select",
-   "label": "Select Day",
-   "options": "Monday\nTuesday\nWednesday\nThursday\nFriday\nSaturday"
+   "label": "Plan",
+   "options": "Beginner\nIntermediate\nAdvanced"
   },
   {
-   "depends_on": "eval:doc.select_day==\"Monday\"",
-   "fieldname": "monday",
+   "fieldname": "description",
    "fieldtype": "Table",
-   "label": "Monday",
-   "options": "Monday"
+   "label": "description",
+   "options": "Gym Workout Plan Exercise"
   },
   {
-   "depends_on": "eval:doc.select_day==\"Tuesday\"",
-   "fieldname": "tuesday",
-   "fieldtype": "Table",
-   "label": "Tuesday",
-   "options": "Tuesday"
-  },
-  {
-   "depends_on": "eval:doc.select_day==\"Wednesday\"",
-   "fieldname": "wednesday",
-   "fieldtype": "Table",
-   "label": "Wednesday",
-   "options": "Wednesday"
-  },
-  {
-   "depends_on": "eval:doc.select_day==\"Thursday\"",
-   "fieldname": "thursday",
-   "fieldtype": "Table",
-   "label": "Thursday",
-   "options": "Thursday"
-  },
-  {
-   "depends_on": "eval:doc.select_day==\"Friday\"",
-   "fieldname": "friday",
-   "fieldtype": "Table",
-   "label": "Friday",
-   "options": "Friday"
-  },
-  {
-   "depends_on": "eval:doc.select_day==\"Saturday\"",
-   "fieldname": "saturday",
-   "fieldtype": "Table",
-   "label": "Saturday",
-   "options": "Saturday"
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "label": "Trainer",
+   "options": "Trainer"
   }
  ],
+ "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-08 11:14:58.788883",
+ "modified": "2023-04-19 14:44:54.060871",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Gym Workout Plan",
- "naming_rule": "Expression",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
@@ -95,55 +52,9 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Gym Member",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Gym Trainer",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Gym Admin",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "All",
-   "share": 1
   }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "track_seen": 1
+ "states": []
 }

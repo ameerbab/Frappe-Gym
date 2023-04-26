@@ -18,6 +18,7 @@
   "date_time",
   "section_break_9",
   "trainer",
+  "trainer_name",
   "available_capacity",
   "status",
   "website_settings_section",
@@ -130,6 +131,12 @@
    "fieldtype": "Attach Image",
    "hidden": 1,
    "label": "photo"
+  },
+  {
+   "fetch_from": "trainer.full_name",
+   "fieldname": "trainer_name",
+   "fieldtype": "Data",
+   "label": "Trainer Name"
   }
  ],
  "has_web_view": 1,
@@ -138,7 +145,7 @@
  "is_calendar_and_gantt": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2023-04-08 12:05:40.550708",
+ "modified": "2023-04-17 16:08:32.795463",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Class",

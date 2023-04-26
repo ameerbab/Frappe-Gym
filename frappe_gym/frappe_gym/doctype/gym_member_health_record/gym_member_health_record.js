@@ -1,6 +1,3 @@
-// Copyright (c) 2023, Eng. Omar M. K. Shehada and contributors
-// For license information, please see license.txt
-
 frappe.ui.form.on('Gym Member Health Record', {
 	onload:function(frm){
 		if (frm.doc.__islocal == 1)
@@ -21,7 +18,6 @@ frappe.ui.form.on('Gym Member Health Record', {
 	 		a.bmi_type="Overweight"
 		else
 		 	a.bmi_type="Obesity"
-			
 		frm.refresh_fields("health_stats");
 
 

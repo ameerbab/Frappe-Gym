@@ -9,6 +9,7 @@
  "engine": "InnoDB",
  "field_order": [
   "member",
+  "full_name",
   "email",
   "plan",
   "price",
@@ -16,12 +17,11 @@
   "column_break_6",
   "start_date",
   "end_date",
-  "day_lefts",
+  "days_left",
   "payment_status",
   "section_break_3",
-  "length",
-  "notes",
-  "includes_trainer",
+  "include_trainer",
+  "trainer",
   "naming_series"
  ],
  "fields": [
@@ -36,10 +36,10 @@
   },
   {
    "fieldname": "plan",
-   "fieldtype": "Link",
+   "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Plan",
-   "options": "Membership Types",
+   "options": "Monthly\nSix-month\nAnnually",
    "reqd": 1
   },
   {
@@ -55,7 +55,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "default": "Today",
    "fieldname": "start_date",
    "fieldtype": "Date",
    "in_list_view": 1,
@@ -81,29 +80,6 @@
    "fieldtype": "Section Break"
   },
   {
-   "fetch_from": "plan.length_in_days",
-   "fieldname": "length",
-   "fieldtype": "Int",
-   "hidden": 1,
-   "label": "Length",
-   "read_only": 1
-  },
-  {
-   "fieldname": "notes",
-   "fieldtype": "Small Text",
-   "label": "Notes"
-  },
-  {
-   "default": "0",
-   "fetch_from": "plan.includes_trainer",
-   "fieldname": "includes_trainer",
-   "fieldtype": "Check",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Includes Trainer",
-   "read_only": 1
-  },
-  {
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "hidden": 1,
@@ -125,14 +101,33 @@
    "read_only": 1
   },
   {
-   "fieldname": "day_lefts",
+   "fetch_from": "member.full_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "depends_on": "eval:doc.include_trainer=='1'",
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "label": "Trainer",
+   "options": "Trainer"
+  },
+  {
+   "default": "0",
+   "fieldname": "include_trainer",
+   "fieldtype": "Check",
+   "label": "Include Trainer"
+  },
+  {
+   "fieldname": "days_left",
    "fieldtype": "Data",
    "label": "Days Left"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-11 16:52:39.257081",
+ "modified": "2023-04-18 14:58:38.505583",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Gym Membership",

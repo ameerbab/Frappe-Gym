@@ -17,7 +17,6 @@
   "column_break_5",
   "sex",
   "mobile",
-  "phone",
   "dob",
   "section_break_4",
   "user_id",
@@ -25,10 +24,7 @@
   "column_break_13",
   "invite_user",
   "photo",
-  "trainer_details_section",
-  "bio",
-  "section_break_10",
-  "notes"
+  "section_break_10"
  ],
  "fields": [
   {
@@ -69,23 +65,8 @@
    "label": "Photo"
   },
   {
-   "fieldname": "trainer_details_section",
-   "fieldtype": "Section Break",
-   "label": "Trainer Details"
-  },
-  {
-   "fieldname": "bio",
-   "fieldtype": "Small Text",
-   "label": "Bio"
-  },
-  {
    "fieldname": "section_break_10",
    "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "notes",
-   "fieldtype": "Small Text",
-   "label": "Notes"
   },
   {
    "fieldname": "user_id",
@@ -114,11 +95,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "phone",
-   "fieldtype": "Data",
-   "label": "Phone number"
-  },
-  {
    "fieldname": "column_break_5",
    "fieldtype": "Column Break"
   },
@@ -131,7 +107,8 @@
   {
    "fieldname": "dob",
    "fieldtype": "Date",
-   "label": "Date of Birth"
+   "label": "Date of Birth",
+   "reqd": 1
   },
   {
    "fieldname": "trainer_details",
@@ -150,7 +127,7 @@
  "image_field": "photo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-03 10:26:03.200769",
+ "modified": "2023-04-19 11:51:42.045623",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Trainer",
@@ -166,6 +143,39 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Member",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Trainer",
    "share": 1,
    "write": 1
   }

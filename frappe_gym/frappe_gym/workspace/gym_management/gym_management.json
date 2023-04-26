@@ -1,11 +1,6 @@
 {
- "charts": [
-  {
-   "chart_name": "Gym Members",
-   "label": "Gym Members"
-  }
- ],
- "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Gym Management</span>\",\"col\":12}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Gym Members\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Member\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Membership\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Membership Types\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Trainer Subscription\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Trainer\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Locker\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Locker Booking\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Class Type\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Class\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Class Booking\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Workout Plan\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Member Measurements\",\"col\":3}},{\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Gym Settings\",\"col\":4}}]",
+ "charts": [],
+ "content": "[{\"id\":\"5XcS07b82h\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Gym Management</span>\",\"col\":12}},{\"id\":\"uSOIhPHIYU\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Gym Members\",\"col\":12}},{\"id\":\"wQTob4cmZv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Member\",\"col\":3}},{\"id\":\"e5jm2d2ojU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Membership\",\"col\":3}},{\"id\":\"aY9QB_O7MA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Membership Types\",\"col\":3}},{\"id\":\"rgbTtCX9km\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Trainer Subscription\",\"col\":3}},{\"id\":\"nYedDGm9wz\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Trainer\",\"col\":3}},{\"id\":\"wy5DFquJDv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Locker Booking\",\"col\":3}},{\"id\":\"nJDY7ZWC98\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Class Type\",\"col\":3}},{\"id\":\"s8sDv-wqd5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Class\",\"col\":3}},{\"id\":\"KfKrYksRHb\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Class Booking\",\"col\":3}},{\"id\":\"iUoJBThlaj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Workout Plan\",\"col\":3}},{\"id\":\"yRX8ogrS-i\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Member Measurements\",\"col\":3}},{\"id\":\"WbikB0JuwV\",\"type\":\"card\",\"data\":{\"card_name\":\"TEST\",\"col\":4}},{\"id\":\"HFlppROzFj\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}},{\"id\":\"W0C6_mfbVx\",\"type\":\"card\",\"data\":{\"card_name\":\"Gym Settings\",\"col\":4}}]",
  "creation": "2022-12-18 02:11:59.309238",
  "docstatus": 0,
  "doctype": "Workspace",
@@ -37,13 +32,25 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Reports",
-   "link_count": 4,
+   "label": "Page",
+   "link_count": 0,
+   "link_to": "Page",
+   "link_type": "DocType",
    "onboard": 0,
-   "type": "Card Break"
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "User Profile",
+   "link_count": 0,
+   "link_to": "gym-member-profile",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2023-04-12 10:13:42.296756",
+ "modified": "2023-04-20 16:22:04.905189",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Gym Management",
@@ -52,23 +59,13 @@
  "parent_page": "",
  "public": 1,
  "quick_lists": [],
- "roles": [],
+ "roles": [
+  {
+   "role": "Gym Admin"
+  }
+ ],
  "sequence_id": 1.0,
  "shortcuts": [
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Gym Trainer Subscription",
-   "link_to": "Gym Trainer Subscription",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Membership Types",
-   "link_to": "Membership Types",
-   "type": "DocType"
-  },
   {
    "color": "Green",
    "doc_view": "List",
@@ -100,13 +97,6 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Class Type",
-   "link_to": "Class Type",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
    "label": "Class",
    "link_to": "Class",
    "type": "DocType"
@@ -126,11 +116,28 @@
    "type": "DocType"
   },
   {
-   "color": "Grey",
    "doc_view": "List",
-   "label": "Member Measurements",
-   "link_to": "Member Measurements",
+   "label": "Gym Member Health Record",
+   "link_to": "Gym Member Health Record",
    "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Attendence",
+   "link_to": "Attendence",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Subscription Gym",
+   "link_to": "Subscription Gym",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "test",
+   "link_to": "gym-member-profile",
+   "type": "Page"
   }
  ],
  "title": "Gym Management"

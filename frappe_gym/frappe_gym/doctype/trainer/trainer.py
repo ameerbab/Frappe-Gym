@@ -1,9 +1,6 @@
-# Copyright (c) 2022, Agile.co.za and contributors
-# For license information, please see license.txt
 import frappe
 from frappe import _
 from frappe.model.document import Document
-
 class Trainer(Document):
     def create_website_user(self):
         users = frappe.db.get_all(
@@ -38,7 +35,6 @@ class Trainer(Document):
         user.add_roles("Gym Trainer")
         self.db_set("user_id", user.name)
 
-    # create a frappe user if requested
     def on_update(self):
         if not self.user_id and self.email and self.invite_user:
             self.create_website_user()	

@@ -1,0 +1,24 @@
+
+
+<table class="table table-bordered" style="margin: 0; font-size:100%;">
+    <tr>
+        <td>Class</td>
+        <td>Class Type</td>
+        <td>Member</td>
+        <td>Day</td>
+        <td>Status</td>
+        <td>Date</td>
+        
+    </tr>
+    {% for d in data %}
+    <tr>
+        <td>{{d.class_name}}</td>
+        <td>{{d.class_type}}</td>
+        <td>{{d.member}}</td>
+        <td>{{d.select_day}}</td>
+        <td>{{d.absence_or_present}}</td>
+        <td>{{d.date}}</td>
+        
+    {% endif %}
+    </tr>
+</table>

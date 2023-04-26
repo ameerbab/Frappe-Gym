@@ -1,6 +1,3 @@
-// Copyright (c) 2022, Warren Eiserman and contributors
-// For license information, please see license.txt
-
 frappe.ui.form.on("Class", {
     refresh(frm) {
         if(!frm.is_dirty()) {
@@ -19,11 +16,11 @@ frappe.ui.form.on("Class", {
                     ],
                     primary_action_label: "Book Class",
                     primary_action: (data) => {
-                        console.log(data);
-                        let { member } = data;
-                        frappe.new_doc("Class Booking", {
-                            class: frm.doc.name,
-                            member: member,
+                        data.class_data=cur_frm.doc.name
+                       frappe.new_doc("Class Booking", {
+                            class: frm.doc.class,
+                            member: data.member,
+                            class_data:data.class_data,
                             status: "Confirmed"
                         });
                     },

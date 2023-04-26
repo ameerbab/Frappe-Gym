@@ -9,17 +9,24 @@
  "engine": "InnoDB",
  "field_order": [
   "class_data",
+  "class_name",
   "class_type",
+  "trainer",
+  "trainer_name",
+  "class_time",
   "slot_capacity",
   "available_slots",
   "date",
   "column_break_3",
   "member",
+  "email",
   "naming_series",
   "status",
   "full_name",
   "is_published",
-  "route"
+  "send_email",
+  "route",
+  "section_break_erbr5"
  ],
  "fields": [
   {
@@ -72,7 +79,7 @@
    "read_only": 1
   },
   {
-   "fetch_from": "class.class_type",
+   "fetch_from": "class_data.class_type",
    "fieldname": "class_type",
    "fieldtype": "Data",
    "label": "Class Type",
@@ -100,13 +107,52 @@
    "fieldname": "available_slots",
    "fieldtype": "Int",
    "label": "Available Slots"
+  },
+  {
+   "fetch_from": "class_data.class_name",
+   "fieldname": "class_name",
+   "fieldtype": "Data",
+   "label": "Class Name"
+  },
+  {
+   "default": "0",
+   "fieldname": "send_email",
+   "fieldtype": "Check",
+   "label": "Send Email"
+  },
+  {
+   "fetch_from": "member.email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "section_break_erbr5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "trainer",
+   "fieldtype": "Data",
+   "label": "Trainer"
+  },
+  {
+   "fetch_from": "class_data.class_time",
+   "fieldname": "class_time",
+   "fieldtype": "Time",
+   "label": "Class TIme"
+  },
+  {
+   "fetch_from": "class_data.trainer_name",
+   "fieldname": "trainer_name",
+   "fieldtype": "Data",
+   "label": "Trainer Name"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2023-04-10 15:20:36.107255",
+ "modified": "2023-04-18 12:52:04.347685",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Class Booking",

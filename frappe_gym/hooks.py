@@ -2,7 +2,7 @@ from . import __version__ as app_version
 
 app_name = "frappe_gym"
 app_title = "Frappe Gym"
-app_publisher = "Eng. Omar M. K. Shehada"
+app_publisher = "Finbyz"
 app_description = "A system to manage and handle members, memberships, locker allocation, group classes, professional trainer subscriptions, etc."
 app_email = "o.shehada@ard.ly"
 app_license = "MIT"
@@ -12,14 +12,15 @@ app_license = "MIT"
 # Includes in <head>
 # ------------------
 
-fixtures = ['Member', 'Membership Types', 'Gym Membership']
+fixtures = ['Member', 'Gym Membership']
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/frappe_gym/css/frappe_gym.css"
 # app_include_js = "/assets/frappe_gym/js/frappe_gym.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/frappe_gym/css/frappe_gym.css"
+# web_include_css = "/assets/frappe_gym/css/frappe_gym.css".
+
 # web_include_js = "/assets/frappe_gym/js/frappe_gym.js"
 
 # include custom scss in every website theme (without file extension ".scss")
@@ -117,6 +118,12 @@ doc_events = {
 
 # Scheduled Tasks
 # ---------------
+
+schedular_events={
+    "daily":[
+    "frappe_gym.gym_membership.get_daysleft_in_plan"
+    ]
+}
 
 # scheduler_events = {
 #	"all": [
