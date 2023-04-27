@@ -30,7 +30,7 @@ class Analytics(object):
 			{
 				"label": _("Class"),
 				"fieldname": "class_data",
-				"fieldtype": "Data",
+				"fieldtype": "Link",
 				"options":"Class",
 				"width": 140,
 			},
@@ -91,7 +91,7 @@ class Analytics(object):
 			
 			member = self.filters.get('member')
 			member_name = frappe.db.get_value("Member", member, "full_name")
-			class_name = self.filters.get('class')
+			class_name = self.filters.get('class_data')
 			
 			if class_name==d['class_data']:
 				row={

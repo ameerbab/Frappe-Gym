@@ -22,7 +22,8 @@
   "section_break_3",
   "include_trainer",
   "trainer",
-  "naming_series"
+  "naming_series",
+  "amended_from"
  ],
  "fields": [
   {
@@ -65,7 +66,8 @@
    "fieldname": "end_date",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "End Date"
+   "label": "End Date",
+   "read_only": 1
   },
   {
    "default": "Awaiting Payment",
@@ -123,11 +125,21 @@
    "fieldname": "days_left",
    "fieldtype": "Data",
    "label": "Days Left"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Membership",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-04-18 14:58:38.505583",
+ "modified": "2023-04-27 16:00:02.356258",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Gym Membership",

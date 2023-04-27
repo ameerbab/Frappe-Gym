@@ -21,7 +21,8 @@
   "id_type",
   "photo",
   "invite_user",
-  "status"
+  "status",
+  "amended_from"
  ],
  "fields": [
   {
@@ -121,12 +122,22 @@
    "hidden": 1,
    "label": "Status",
    "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Member",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "image_field": "photo",
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-04-20 15:09:57.191710",
+ "modified": "2023-04-27 14:52:51.226228",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Member",

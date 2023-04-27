@@ -25,7 +25,8 @@
   "is_published",
   "route",
   "photo",
-  "naming_series"
+  "naming_series",
+  "amended_from"
  ],
  "fields": [
   {
@@ -137,6 +138,15 @@
    "fieldname": "trainer_name",
    "fieldtype": "Data",
    "label": "Trainer Name"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Class",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "has_web_view": 1,
@@ -144,8 +154,9 @@
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "is_published_field": "is_published",
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-04-17 16:08:32.795463",
+ "modified": "2023-04-27 10:09:57.002583",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Class",

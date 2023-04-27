@@ -12,7 +12,8 @@
   "locker_no",
   "no_of_lockers",
   "start_time",
-  "end_time"
+  "end_time",
+  "amended_from"
  ],
  "fields": [
   {
@@ -41,11 +42,21 @@
    "fieldname": "end_time",
    "fieldtype": "Time",
    "label": "End Time"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Locker Details",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-04-19 14:14:41.812620",
+ "modified": "2023-04-27 10:08:42.911908",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Locker Details",

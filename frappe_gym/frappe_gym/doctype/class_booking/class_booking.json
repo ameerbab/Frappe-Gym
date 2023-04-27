@@ -26,7 +26,8 @@
   "is_published",
   "send_email",
   "route",
-  "section_break_erbr5"
+  "section_break_erbr5",
+  "amended_from"
  ],
  "fields": [
   {
@@ -146,13 +147,23 @@
    "fieldname": "trainer_name",
    "fieldtype": "Data",
    "label": "Trainer Name"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Class Booking",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-04-18 12:52:04.347685",
+ "modified": "2023-04-27 15:04:52.433370",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Class Booking",
@@ -210,7 +221,9 @@
   }
  ],
  "route": "bookings",
+ "search_fields": "class_name",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "class_name"
 }

@@ -49,8 +49,16 @@ frappe.ui.form.on("Gym Membership", {
                 filters: {
                     active: 1,
                 },
-            };
-        });
+            }
+        })
+        frm.set_query("trainer", function () {
+            return {
+                filters: {
+                    active: 1,
+                },
+            }
+        })
     },
+   
 
 });

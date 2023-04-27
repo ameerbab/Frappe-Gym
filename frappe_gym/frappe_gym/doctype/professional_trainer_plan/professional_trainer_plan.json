@@ -10,7 +10,8 @@
  "field_order": [
   "member",
   "professional_plan",
-  "trainer"
+  "trainer",
+  "amended_from"
  ],
  "fields": [
   {
@@ -30,11 +31,21 @@
    "fieldtype": "Link",
    "label": "Professional Plan",
    "options": "Gym Workout Plan"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Professional Trainer Plan",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-04-19 15:44:59.261116",
+ "modified": "2023-04-27 10:09:10.227330",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Professional Trainer Plan",

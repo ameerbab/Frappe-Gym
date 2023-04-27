@@ -12,28 +12,18 @@
   "member",
   "date_of_booking",
   "no_of_lockers",
-  "start_time",
-  "end_time",
+  "slot_time",
   "route",
   "is_published",
   "l_start_time",
-  "l_end_time"
+  "l_end_time",
+  "amended_from"
  ],
  "fields": [
   {
    "fieldname": "date_of_booking",
    "fieldtype": "Date",
    "label": "Date of Booking"
-  },
-  {
-   "fieldname": "start_time",
-   "fieldtype": "Time",
-   "label": "Start Time"
-  },
-  {
-   "fieldname": "end_time",
-   "fieldtype": "Time",
-   "label": "End Time"
   },
   {
    "fieldname": "route",
@@ -50,7 +40,7 @@
    "fetch_from": "locker_name.start_time",
    "fieldname": "l_start_time",
    "fieldtype": "Time",
-   "label": "L Start Time"
+   "label": "Locker Start Time"
   },
   {
    "fieldname": "locker_name",
@@ -62,7 +52,7 @@
    "fetch_from": "locker_name.end_time",
    "fieldname": "l_end_time",
    "fieldtype": "Time",
-   "label": "L End  Time"
+   "label": "Locker End  Time"
   },
   {
    "fieldname": "member",
@@ -75,11 +65,28 @@
    "fieldname": "no_of_lockers",
    "fieldtype": "Int",
    "label": "No of Lockers"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Locker Booking",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.locker_name",
+   "fieldname": "slot_time",
+   "fieldtype": "Select",
+   "label": "Slot Time",
+   "options": "\n09:00:00-10:00:00\n10:00:00-11:00:00\n11:00:00-12:00:00\n12:00:00-13:00:00\n13:00:00-14:00:00\n14:00:00-15:00:00\n15:00:00-16:00:00\n16:00:00-17:00:00\n17:00:00-18:00:00\n18:00:00-19:00:00\n19:00:00-20:00:00\n20:00:00-21:00:00\n21:00:00-22:00:00"
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-04-19 12:03:57.733391",
+ "modified": "2023-04-27 17:30:26.009267",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Locker Booking",

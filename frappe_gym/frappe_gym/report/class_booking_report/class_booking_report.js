@@ -5,16 +5,10 @@
 frappe.query_reports["Class Booking Report"] = {
 	"filters": [
           
-			// {
-			// 	fieldname:"member",
-			// 	label:__("Member"),
-			// 	fieldtype:"Link",
-			// 	options:"Member",
-			// },
 		    {
-				fieldname: "class",
+				fieldname: "class_data",
 				fieldtype: "Link",
-				label: "Class",
+				label: __("Class"),
 				options: "Class",
 			},
 

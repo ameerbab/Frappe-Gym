@@ -19,7 +19,8 @@
   "total_plan_days_fees",
   "rating_section",
   "rating",
-  "rating_comments"
+  "rating_comments",
+  "amended_from"
  ],
  "fields": [
   {
@@ -90,11 +91,21 @@
    "fieldname": "days_left",
    "fieldtype": "Data",
    "label": "Days Left"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Subscription Gym",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-04-19 11:53:02.129121",
+ "modified": "2023-04-27 10:09:35.656996",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Subscription Gym",
