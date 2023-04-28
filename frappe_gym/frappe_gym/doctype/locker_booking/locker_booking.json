@@ -23,6 +23,8 @@
   {
    "fieldname": "date_of_booking",
    "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Date of Booking"
   },
   {
@@ -57,6 +59,8 @@
   {
    "fieldname": "member",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Member",
    "options": "Member"
   },
@@ -64,6 +68,7 @@
    "fetch_from": "locker_name.no_of_lockers",
    "fieldname": "no_of_lockers",
    "fieldtype": "Int",
+   "in_list_view": 1,
    "label": "No of Lockers"
   },
   {
@@ -86,7 +91,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-04-27 17:30:26.009267",
+ "modified": "2023-04-28 10:09:06.131868",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Locker Booking",

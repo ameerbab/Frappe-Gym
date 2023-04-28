@@ -12,7 +12,7 @@ class Trainer(Document):
             frappe.throw(
                 _(
                     "User exists with Email {}, Mobile {}<br>Please check email / mobile or disable 'Invite as User' to skip creating User"
-                ).format(frappe.bold(users[0].email), frappe.bold(users[0].mobile_no)),
+                ).format(frappe.bold(users[0].email), frappe.bold(users[0].mobile)),
                 frappe.DuplicateEntryError,
             )
 
@@ -24,7 +24,6 @@ class Trainer(Document):
                 "email": self.email,
                 "user_type": "Website User",
                 "gender": self.sex,
-                "phone": self.phone,
                 "mobile_no": self.mobile,
                 "birth_date": self.dob,
             }
@@ -38,4 +37,14 @@ class Trainer(Document):
     def on_update(self):
         if not self.user_id and self.email and self.invite_user:
             self.create_website_user()	
+    
+    def activestatus(self):
+        if self.docstatus==0 or self.docstatus==1:
+            frappe.db.set_value("Trainer","active",1)
+        else:
+            frappe.db.set_value("Trainer","active",0)
+        
+    def on_save(self):
+        self.activestatus()
+
 

@@ -1,5 +1,6 @@
 from datetime import datetime 
 import frappe
+from frappe import _
 from frappe.website.website_generator import WebsiteGenerator
 
 class LockerBooking(WebsiteGenerator):
@@ -10,7 +11,7 @@ def validate_locker_availability(locker_start_time,locker_end_time,slot_time):
 	lendtime=locker_end_time[:2]
 	sst=slot_time[:2]
 	if int(sst)<int(lstarttime) or int(sst)>=int(lendtime):
-		frappe.throw(f"plz enter the slot time between {locker_start_time} and {locker_end_time} ")
+		frappe.throw(_(f"Please Enter the slot time between {locker_start_time} and {locker_end_time}"), title=_("Error"))
 
 @frappe.whitelist()
 def validate_no_of_lockers(no_of_lockers,locker_name):
