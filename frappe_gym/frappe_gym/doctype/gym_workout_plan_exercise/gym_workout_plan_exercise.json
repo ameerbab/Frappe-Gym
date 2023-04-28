@@ -15,24 +15,27 @@
   {
    "fieldname": "excersice_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Excersice Name"
   },
   {
    "fieldname": "day",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Day",
    "options": "Monday\nTuesday\nWednesday\nThrusday\nFriday\nSaturday"
   },
   {
    "fieldname": "description",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Description"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-04-18 14:03:31.552000",
+ "modified": "2023-04-28 11:33:17.048300",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Gym Workout Plan Exercise",

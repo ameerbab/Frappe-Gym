@@ -37,7 +37,8 @@ class GymMember {
 	
 	frappe.xcall("frappe_gym.frappe_gym.page.gym_member_profile.gym_member_profile.get_details", {
 		"doctype":"Gym Membership",
-		"user":frappe.session.user,
+		"user": frappe.session.user,
+		"role":frappe.user.has_role("Frappe")
 	})
 	.then((r) => {
 	    

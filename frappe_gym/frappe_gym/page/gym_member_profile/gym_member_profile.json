@@ -4,7 +4,7 @@
  "docstatus": 0,
  "doctype": "Page",
  "idx": 0,
- "modified": "2023-04-12 11:18:04.302513",
+ "modified": "2023-04-28 12:04:11.307871",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "gym-member-profile",
@@ -13,6 +13,12 @@
  "roles": [
   {
    "role": "Gym Admin"
+  },
+  {
+   "role": "Gym Member"
+  },
+  {
+   "role": "Gym Trainer"
   }
  ],
  "script": null,

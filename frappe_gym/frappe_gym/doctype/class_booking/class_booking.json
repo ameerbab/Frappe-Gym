@@ -34,6 +34,7 @@
    "fieldname": "member",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Member",
    "options": "Member",
    "reqd": 1
@@ -80,11 +81,10 @@
    "read_only": 1
   },
   {
-   "fetch_from": "class_data.class_type",
    "fieldname": "class_type",
-   "fieldtype": "Data",
+   "fieldtype": "Select",
    "label": "Class Type",
-   "read_only": 1
+   "options": "Athletic Training\nBarre\nBoxing and Kickboxing\nCycling\nLong + Lean\nPilates\nStretch and Recovery\nYoga"
   },
   {
    "fieldname": "column_break_3",
@@ -94,6 +94,7 @@
    "fieldname": "class_data",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Class",
    "options": "Class",
    "reqd": 1
@@ -132,8 +133,10 @@
    "fieldtype": "Section Break"
   },
   {
+   "fetch_from": "class_data.trainer_name",
    "fieldname": "trainer",
    "fieldtype": "Data",
+   "in_standard_filter": 1,
    "label": "Trainer"
   },
   {
@@ -163,7 +166,7 @@
  "is_published_field": "is_published",
  "is_submittable": 1,
  "links": [],
- "modified": "2023-04-27 15:04:52.433370",
+ "modified": "2023-04-28 11:36:33.305180",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Class Booking",

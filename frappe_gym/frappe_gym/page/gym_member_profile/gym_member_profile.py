@@ -1,10 +1,9 @@
 import frappe
 
 @frappe.whitelist()
-def get_details(doctype,user):
-   if user=='Administrator':
+def get_details(doctype,user,role):
+    if user=="Administrator" or role:
        data=frappe.db.get_list(doctype,{},['full_name','plan','price','start_date','end_date','days_left','status','trainer'])
-   else:
+    else:
        data=frappe.db.get_list(doctype,{'email':user},['full_name','plan','price','start_date','end_date','days_left','status','trainer']) 
-       
-   return data
+    return data
