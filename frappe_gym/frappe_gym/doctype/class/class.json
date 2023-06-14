@@ -90,9 +90,10 @@
    "reqd": 1
   },
   {
+   "default": "0",
    "fieldname": "available_capacity",
    "fieldtype": "Data",
-   "label": "Available capacity"
+   "label": "available capacity"
   },
   {
    "default": "Open",
@@ -155,7 +156,7 @@
  "is_published_field": "is_published",
  "is_submittable": 1,
  "links": [],
- "modified": "2023-04-28 12:37:49.611872",
+ "modified": "2023-06-13 10:30:56.452264",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Class",

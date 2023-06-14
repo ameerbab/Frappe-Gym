@@ -13,10 +13,10 @@
   "class_type",
   "trainer",
   "trainer_name",
+  "class_date",
   "class_time",
   "slot_capacity",
   "available_slots",
-  "date",
   "column_break_3",
   "member",
   "email",
@@ -72,13 +72,6 @@
    "fieldtype": "Data",
    "hidden": 1,
    "label": "route"
-  },
-  {
-   "fetch_from": "class.class_date",
-   "fieldname": "date",
-   "fieldtype": "Date",
-   "label": "Date",
-   "read_only": 1
   },
   {
    "fieldname": "class_type",
@@ -159,6 +152,12 @@
    "options": "Class Booking",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fetch_from": "class_data.class_date",
+   "fieldname": "class_date",
+   "fieldtype": "Date",
+   "label": "Class Date"
   }
  ],
  "has_web_view": 1,
@@ -166,7 +165,7 @@
  "is_published_field": "is_published",
  "is_submittable": 1,
  "links": [],
- "modified": "2023-04-28 11:36:33.305180",
+ "modified": "2023-06-14 16:28:31.187117",
  "modified_by": "Administrator",
  "module": "Frappe Gym",
  "name": "Class Booking",
